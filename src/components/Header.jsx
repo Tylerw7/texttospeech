@@ -3,6 +3,7 @@ import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, Navbar
 import TokenContext from "../context/TokenContext";
 import { Link as RouterLink } from 'react-router-dom';
 import Logo from '../assets/images/TEXT.png'
+import Axios from 'axios'
 import {Avatar} from "@nextui-org/react";
 
 const Header = () => {
@@ -30,6 +31,23 @@ const {isAuthenticated, setIsAuthenticated} = useContext(TokenContext)
     localStorage.removeItem('text')
     localStorage.removeItem('audioUrl')
   }
+
+  const openPortal = async () => {
+    const token = localStorage.getItem('token')
+
+    try {
+      const portalSession = await Axios.post('http://localhost:5000/customer-portal', {}, {
+        headers: {
+            'Authorization': `Bearer ${token}`,
+        }
+      })
+
+      window.location.href = portalSession.data.url
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
 
 
   return (
@@ -67,11 +85,7 @@ const {isAuthenticated, setIsAuthenticated} = useContext(TokenContext)
             Help
           </Link>
         </NavbarItem>
-        <NavbarItem>
-          <Link className="text-[#F3F4F6] text-[1.4rem]" href="#">
-            Contact
-          </Link>
-        </NavbarItem>
+        
         <NavbarItem>
           <RouterLink to='/pricing' className="text-[#F3F4F6] text-[1.4rem]" >
             Pricing
@@ -86,7 +100,11 @@ const {isAuthenticated, setIsAuthenticated} = useContext(TokenContext)
           
         :
         <div className="flex gap-4">
-          <Avatar  isBordered color="warning" showFallback size="md" />
+          <Button
+          color="danger"
+          variant='ghost'
+          onClick={openPortal}
+          >Account Portal</Button>
           <Button as={RouterLink} color="primary" className=" text-[#F3F4F6] tracking-wide" href="#" onClick={deleteToken}>
             Sign Out
           </Button>

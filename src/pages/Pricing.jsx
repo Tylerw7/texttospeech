@@ -61,12 +61,13 @@ const Pricing = () => {
             <Header />
             
             <div className='bg-[#F3F4F6] h-[100vh] '>
-                <div className='flex justify-around flex-wrap h-full items-center'>
+                <div className='flex justify-around flex-wrap h-full items-center m-4'>
 
                     <SubCard 
                     plan={"FREE"}
                     price={'Free'}
                     contentOne={'Roughly 7 minutes of audio'}
+                    button={'Register'}
                     />
 
                     {prices.length > 0 && ( 
@@ -76,6 +77,7 @@ const Pricing = () => {
                     price_id={prices[2].id}
                     price={prices[2].unit_amount / 100}
                     contentOne={'Over 6 Hours of audio'}
+                    button={'Subscribe'}
                     />
                     )}
 
@@ -86,14 +88,12 @@ const Pricing = () => {
                     price_id={prices[0].id}
                     price={prices[0].unit_amount / 100}
                     contentOne={'16 Hours of audio'}
+                    button={'Subscribe'}
                     />
                 )}
                 
                 </div>
-                <Button onClick={() => checkSubs()} className="text-tiny w-[10rem] text-[1.3rem]" color="primary" radius="full" size="lg">
-                Check Subscription
-                </Button>
-                 {plan}
+                
             </div>
             
 

@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import {Modal, ModalContent, ModalHeader, ModalBody, ModalFooter} from "@nextui-org/modal";
 import logo from '../assets/images/ECHOTEXT2.png'
 
-const SubCard = ({price_id, price, plan, contentOne, contentTwo, ContentThree}) => {
+const SubCard = ({price_id, price, plan, contentOne, contentTwo, ContentThree, button}) => {
     const navigate = useNavigate()
     const [open, setOpen] = useState(false)
 
@@ -85,7 +85,7 @@ const SubCard = ({price_id, price, plan, contentOne, contentTwo, ContentThree}) 
         size="lg"
         variant='ghost'
         >
-          Subscribe
+          {button}
         </Button>
         </div>
         <Modal isOpen={open} onOpenChange={setOpen}>
