@@ -70,7 +70,7 @@ const Login = () => {
         {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
 
         <div className='flex gap-1 flex-col justify-center text-center items-center'>
-          <Link href='#' color="danger">Reset Password</Link>
+          <RouterLink to='/reset-password' className='text-red-500 text-[1.1rem]'>Reset Password</RouterLink>
           
         </div>
       </div>

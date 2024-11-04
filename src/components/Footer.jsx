@@ -44,6 +44,7 @@ const Footer = () => {
         </div>
         <div className='w-full flex flex-col items-center pb-[50px] pt-[50px]'>
             <h3 className='text-[200%]'>Contact</h3>
+            <p>echotextai@gmail.com</p>
         </div>
     </div>
   )

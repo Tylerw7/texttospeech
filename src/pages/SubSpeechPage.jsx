@@ -22,6 +22,8 @@ const SpeechPage = () => {
   const [fileName, setFileName] = useState('output');
   const audioRef = useRef();
 
+  
+
   useEffect(() => {
     const savedText = localStorage.getItem('text')
     const savedAudioUrl = localStorage.getItem('audioUrl');
@@ -80,6 +82,8 @@ const SpeechPage = () => {
         { lettersUsed: text.length }, 
         { headers: { Authorization: `Bearer ${token}` } }
     );
+
+    
 
 
 

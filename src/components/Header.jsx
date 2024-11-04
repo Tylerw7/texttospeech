@@ -12,16 +12,10 @@ const Header = () => {
 const {isAuthenticated, setIsAuthenticated} = useContext(TokenContext)
 
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    
+    {label: 'Home', path: '/'},
+    {label: 'Product', path: '/speechApp'},
+    {label: 'Pricing', path: '/pricing'}
   ];
 
 
@@ -115,16 +109,16 @@ const {isAuthenticated, setIsAuthenticated} = useContext(TokenContext)
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
+            <RouterLink
               color={
                 index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
               }
               className="w-full"
-              href="#"
+              to={item.path}
               size="lg"
             >
-              {item}
-            </Link>
+              {item.label}
+            </RouterLink>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>

@@ -97,7 +97,7 @@ const SubCard = ({price_id, price, plan, contentOne, contentTwo, ContentThree, b
                               <div className='h-[50px] flex justify-center items-center'>
                                 <img src={logo} className='w-[10rem] object-cover' />
                               </div>
-                                <p>You are already subscribed to this plan.</p>
+                                <p>You are already subscribed to a plan. If you would like to change or cancel your plan, go to (Account Portal) to cancel your current plan.</p>
                             </ModalBody>
                             <ModalFooter>
                                 <Button color="danger" onPress={onClose}>
