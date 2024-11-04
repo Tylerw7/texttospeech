@@ -31,7 +31,7 @@ const SpeechPage = () => {
     const fetchLimit = async () => {
     try {
       const token = localStorage.getItem("token")
-      const response = await Axios.get('http://localhost:5000/check-mid-limit', {
+      const response = await Axios.get('https://echotext-server-82e5740cb6f6.herokuapp.com/check-mid-limit', {
         headers: { Authorization: `Bearer ${token}` }
     });
     
@@ -71,12 +71,12 @@ const SpeechPage = () => {
       const token = localStorage.getItem('token')
       
       console.log(voice)
-      const response = await Axios.post('http://localhost:5000/api/text-to-speech', { text, voice }, {
+      const response = await Axios.post('https://echotext-server-82e5740cb6f6.herokuapp.com/api/text-to-speech', { text, voice }, {
         responseType: 'blob', // Expecting a binary file (mp3)
       });
 
 
-      await Axios.post('http://localhost:5000/update-mid-limit', 
+      await Axios.post('https://echotext-server-82e5740cb6f6.herokuapp.com/update-mid-limit', 
         { lettersUsed: text.length }, 
         { headers: { Authorization: `Bearer ${token}` } }
     );

@@ -61,7 +61,7 @@ const Register = () => {
    
 
       try {
-        const response = await Axios.post('http://localhost:5000/register', {
+        const response = await Axios.post('https://echotext-server-82e5740cb6f6.herokuapp.com/register', {
         username,
         email,
         password,

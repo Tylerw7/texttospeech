@@ -30,7 +30,7 @@ const SubCard = ({price_id, price, plan, contentOne, contentTwo, ContentThree, b
 
     
     try {
-      const response = await Axios.get('http://localhost:5000/validateId', {
+      const response = await Axios.get('https://echotext-server-82e5740cb6f6.herokuapp.com/validateId', {
           headers: {
               'Authorization': `Bearer ${token}`,
           }
@@ -38,7 +38,7 @@ const SubCard = ({price_id, price, plan, contentOne, contentTwo, ContentThree, b
 
       if (response.data.length === 0) {
           try {
-              const info = await Axios.post('http://localhost:5000/stripe-session', { price_id }, {
+              const info = await Axios.post('https://echotext-server-82e5740cb6f6.herokuapp.com/stripe-session', { price_id }, {
                   headers: {
                       'Authorization': `Bearer ${token}`,
                   }

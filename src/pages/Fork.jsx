@@ -22,7 +22,7 @@ const Fork = () => {
 
       try {
         // Send request to the backend to verify token
-        await axios.get('http://localhost:5000/app', {
+        await axios.get('https://echotext-server-82e5740cb6f6.herokuapp.com/app', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -45,7 +45,7 @@ const Fork = () => {
     const token = localStorage.getItem('token')
 
     try {
-        const response = await axios.get('http://localhost:5000/validateId', {
+        const response = await axios.get('https://echotext-server-82e5740cb6f6.herokuapp.com/validateId', {
             headers: {
                 'Authorization': `Bearer ${token}`,
               }

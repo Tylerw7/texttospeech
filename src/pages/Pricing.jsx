@@ -17,7 +17,7 @@ const Pricing = () => {
 
         const fetchPrices = async () => {
            try {
-            const response = await Axios.get('http://localhost:5000/get-prices')
+            const response = await Axios.get('https://echotext-server-82e5740cb6f6.herokuapp.com/get-prices')
 
             
             setPrices(response.data.data)
@@ -35,7 +35,7 @@ const Pricing = () => {
         const token = localStorage.getItem('token')
 
         try {
-            const response = await Axios.get('http://localhost:5000/validateId', {
+            const response = await Axios.get('https://echotext-server-82e5740cb6f6.herokuapp.com/validateId', {
                 headers: {
                     'Authorization': `Bearer ${token}`,
                   }

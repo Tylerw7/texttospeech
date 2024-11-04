@@ -30,7 +30,7 @@ const {isAuthenticated, setIsAuthenticated} = useContext(TokenContext)
     const token = localStorage.getItem('token')
 
     try {
-      const portalSession = await Axios.post('http://localhost:5000/customer-portal', {}, {
+      const portalSession = await Axios.post('https://echotext-server-82e5740cb6f6.herokuapp.com/customer-portal', {}, {
         headers: {
             'Authorization': `Bearer ${token}`,
         }

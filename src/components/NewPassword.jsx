@@ -30,7 +30,7 @@ const NewPassword = () => {
         e.preventDefault()
 
         try {
-            const response = await Axios.post('http://localhost:5000/password-change', { token, password }, { headers: { 'Content-Type': 'application/json' }});
+            const response = await Axios.post('https://echotext-server-82e5740cb6f6.herokuapp.com/password-change', { token, password }, { headers: { 'Content-Type': 'application/json' }});
 
             
             onOpen()

@@ -20,7 +20,7 @@ const ResetPassword = () => {
         setError('')
 
         try {
-            const response = await Axios.post('http://localhost:5000/request-reset-password', {email})
+            const response = await Axios.post('https://echotext-server-82e5740cb6f6.herokuapp.com/request-reset-password', {email})
 
             alert('Password reset link sent to your email');
             setData(response.data)
