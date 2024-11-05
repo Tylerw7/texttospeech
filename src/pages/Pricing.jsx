@@ -60,8 +60,8 @@ const Pricing = () => {
         <>
             <Header />
             
-            <div className='bg-[#F3F4F6] h-[100vh] '>
-                <div className='flex justify-around flex-wrap h-full items-center m-4'>
+            <div className='bg-[#F3F4F6] h-[150vh] sm:h-screen '>
+                <div className='flex justify-around flex-wrap h-full items-center m-4 '>
 
                     <SubCard 
                     plan={"FREE"}

@@ -90,7 +90,7 @@ const Register = () => {
     <div className='w-[100vw] bg-[#0D9488] h-[200vh] sm:h-[100vh] flex flex-col sm:flex-row-reverse justify-center items-center'>
 
     <div className='w-[100%] sm:w-[60%] h-[100%] flex justify-center items-center'>
-      <div className=' bg-white bg-opacity-30 flex flex-col justify-center items-center text-center p-2 w-[55%] h-[75%]' style={{ borderRadius: "10px", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}}>
+      <div className=' bg-white bg-opacity-30 flex flex-col justify-center items-center text-center p-2 w-[65%] h-[75%]' style={{ borderRadius: "10px", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"}}>
         
         <h2 style={{fontWeight: "bold", fontSize: "2.5rem", paddingBottom: "20px"}}>Register</h2>
         <form onSubmit={handleRegisterClick} className='flex flex-col gap-4' style={{width: "15rem"}}>
