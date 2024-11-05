@@ -69,16 +69,7 @@ const {isAuthenticated, setIsAuthenticated} = useContext(TokenContext)
             Product
           </RouterLink>
         </NavbarItem>
-        <NavbarItem>
-          <Link className="text-[#F3F4F6] text-[1.4rem]" href="#">
-            About
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link className="text-[#F3F4F6] text-[1.4rem]" href="#">
-            Help
-          </Link>
-        </NavbarItem>
+        
         
         <NavbarItem>
           <RouterLink to='/pricing' className="text-[#F3F4F6] text-[1.4rem]" >

@@ -153,12 +153,12 @@ const SpeechPage = () => {
     <>
     <Header />
     <div className='border-5 border-solid border-[#60A5FA] rounded-[30px] w-[80vw] h-[80vh] m-auto mt-10 p-2'>
-    <div className='flex flex-col justify-center items-center w-[100%] text-center '>
+    <div className='flex flex-col justify-center items-center w-[100%] text-center pb-[50px] '>
       <div className='w-[30rem] h-[15vh] overflow-hidden'>
        <img src={logo} className='w-full h-full object-cover' alt="Logo" />
       </div>
 
-      <div className='flex justify-center items-center gap-3'>
+      <div className='flex flex-col-reverse sm:flex-row justify-center items-center gap-3'>
       
           <Button onClick={handlePlay} color="primary"><FaPlay /></Button>
           <Button onClick={handlePause} color="danger"><FaPause /></Button>
