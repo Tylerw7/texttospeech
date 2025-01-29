@@ -1,6 +1,7 @@
 import React from 'react'
 import {Button, ButtonGroup} from "@nextui-org/button";
 import logo from '../assets/images/TEXT.png'
+import { Link as RouterLink } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -18,16 +19,16 @@ const Hero = () => {
             variant='ghost'
             color="default"
             className='text-white w-[15rem] h-[3rem]'
-            >
+            ><a href="#about">
               Learn more
-              </Button>
+              </a></Button>
 
             <Button
             className='w-[15rem] h-[3rem] text-[1rem]'
             color='warning'
-            >
+            ><RouterLink to="/speechApp">
               Try for FREE
-              </Button>
+              </RouterLink></Button>
           </div>
 
           <p className='text-[#F3F4F6] pb-[100px] text-left' >EchoText transforms your written text into natural, lifelike audio with just a click. Powered by OpenAI, our app makes it easy to listen to your words, whether it's for personal use, professional content, or accessibility. Simply input your text, choose a voice, and let EchoText bring your words to life.</p>

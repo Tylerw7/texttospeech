@@ -5,6 +5,7 @@ import working from '../assets/images/convert.png'
 import wave from '../assets/images/audio-waves.png'
 import gear from '../assets/images/gears.mp4'
 import {Button, ButtonGroup} from "@nextui-org/button";
+import { Link as RouterLink } from 'react-router-dom'
 
 //<a href="https://www.flaticon.com/free-icons/keyboard" title="keyboard icons">Keyboard icons created by xnimrodx - Flaticon</a>
 //<a href="https://www.flaticon.com/free-icons/agile" title="agile icons">Agile icons created by Uniconlabs - Flaticon</a>
@@ -25,7 +26,8 @@ const HomeSectionTwo = () => {
             className='w-[50%] text-[1.2rem] font-bold overflow-hidden'
             color='warning'
             
-            >TRY FOR FREE</Button>
+            
+            ><RouterLink to="/speechApp">TRY FOR FREE</RouterLink></Button>
         </div>
         <div className='bg-[#F3F4F6] h-[100vh] w-full sm:w-[50%] flex flex-col justify-center items-center gap-7'>
         <img src={keyBoard} className='w-[10rem]' />

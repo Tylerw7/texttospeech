@@ -1,10 +1,11 @@
 import React from 'react'
 import AI from '../assets/images/AI.png'
 import { Button } from '@nextui-org/react'
+import { Link as RouterLink } from 'react-router-dom';
 
 const HomeSectionThree = () => {
   return (
-    <div className='h-full flex flex-col sm:flex-row'>
+    <div className='h-full flex flex-col sm:flex-row' id="about">
 
         <div className='w-[100%] sm:w-[50%] bg-white flex justify-center items-center pt-[100px] pb-[100px]'>
             <img src={AI} className='w-[60%] h-[]' />
@@ -16,7 +17,7 @@ const HomeSectionThree = () => {
             <Button
             color='primary'
             className='w-[60%] mt-[50px]'
-            >TRY FOR FREE</Button>
+            ><RouterLink to="/speechApp">TRY FOR FREE</RouterLink></Button>
         </div>
 
     </div>
